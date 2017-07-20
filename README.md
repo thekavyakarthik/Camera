@@ -41,7 +41,7 @@ Installing opencv3:
 - Create a symbolic link of the compiled python binding to your Anaconda's site-package with the following commands for Python 3.5 and 3.6. **These paths need to be adjusted if you are installing opencv-python to a conda env other than root.**
   - (Python 3.5) `ln -s /usr/local/opt/opencv3/lib/python3.5/site-packages/cv2.cpython-35m-darwin.so /path/to/anaconda/lib/python3.5/site-packages/cv2.so`
   - (Python 3.6)`ln -s /usr/local/opt/opencv3/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so /path/to/anaconda/lib/python3.6/site-packages/cv2.so`
-```
+
 
 Clone Camera, navigate to the resulting directory, and run
 
