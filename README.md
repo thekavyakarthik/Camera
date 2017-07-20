@@ -54,7 +54,7 @@ Please see the camera tutorial notebookin this repo for details of how to config
 
 ```python
 %matplotlib notebook
-from face_rec.camera import take_picture
+from camera import take_picture
 import matplotlib.pyplot as plt
 img_array = take_picture()
 
