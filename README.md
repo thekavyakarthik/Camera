@@ -27,13 +27,13 @@ Installing python-opencv:
 ### Mac OS X Instructions (Python 3)
 Requires: Anaconda + Python 3 (Tested on 3.{5-6}) + Homebrew
 
-Installing opencv3:
+#### Installing opencv3 (OLD WAY):
 
 - Ensure that Anaconda's python executable is the one being used (i.e. `which python` should yield `/path/to/anaconda/bin/python`)
 
 - Update homebrew with `brew update`
 
-- Install homebrew-science formulae with `brew tap homebrew/science`
+- Install homebrew-science formulae with `brew tap brewsci/science`
   - This command allows opencv3 to be installed through homebrew
 
 - Install opencv3 with homebrew using `brew install opencv3 --with-python3 --without-python --without-numpy --with-ffmpeg`
@@ -41,7 +41,26 @@ Installing opencv3:
 - Create a symbolic link of the compiled python binding to your Anaconda's site-package with the following commands for Python 3.5 and 3.6. **These paths need to be adjusted if you are installing opencv-python to a conda env other than root.**
   - (Python 3.5) `ln -s /usr/local/opt/opencv3/lib/python3.5/site-packages/cv2.cpython-35m-darwin.so /path/to/anaconda/lib/python3.5/site-packages/cv2.so`
   - (Python 3.6)`ln -s /usr/local/opt/opencv3/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so /path/to/anaconda/lib/python3.6/site-packages/cv2.so`
+  
+If this works for you, great! If you get errors such as: `cannot find cv2`
 
+#### Installing opencv3 (NEW WAY):
+- Create a new conda enviornment:
+    * `conda create --name myenv` replacing myenv with your enviornment's name.
+
+- Switch to that enviornment using
+    * `source activate myenv`
+
+- Install anaconda in that new enviornment
+    * `conda install anaconda`
+
+- install [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels) in that enviornment
+    * `conda install nb_conda_kernels`
+    * Now, in jupyter notebooks, you can see which enviornments you are in! Make SURE you are in the new conda enviornment.
+    * You can check what kernel you're in by clicking the new 'conda' tab and seeing which one is checked.
+    * to switch enviornments in a notebook, go to kernel > change kernel > and then selecting your new enviornment.
+    
+- `conda install -c anaconda opencv`
 
 Clone Camera, navigate to the resulting directory, and run
 
