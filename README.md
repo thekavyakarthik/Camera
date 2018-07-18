@@ -45,20 +45,20 @@ Requires: Anaconda + Python 3 (Tested on 3.{5-6}) + Homebrew
 If this works for you, great! If you get errors such as: `cannot find cv2`
 
 #### Installing opencv3 (NEW WAY):
-- Create a new conda enviornment:
-    * `conda create --name myenv` replacing myenv with your enviornment's name.
+- Create a new conda environment:
+    * `conda create --name myenv` replacing myenv with your environment's name.
 
-- Switch to that enviornment using
+- Switch to that environment using
     * `source activate myenv`
 
-- Install anaconda in that new enviornment
+- Install anaconda in that new environment
     * `conda install anaconda`
 
-- install [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels) in that enviornment
+- install [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels) in that environment
     * `conda install nb_conda_kernels`
-    * Now, in jupyter notebooks, you can see which enviornments you are in! Make SURE you are in the new conda enviornment.
+    * Now, in jupyter notebooks, you can see which environments you are in! Make SURE you are in the new conda environment.
     * You can check what kernel you're in by clicking the new 'conda' tab and seeing which one is checked.
-    * to switch enviornments in a notebook, go to kernel > change kernel > and then selecting your new enviornment.
+    * to switch environments in a notebook, go to kernel > change kernel > and then selecting your new environment.
     
 - `conda install -c anaconda opencv`
 
