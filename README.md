@@ -36,7 +36,6 @@ Installing python-opencv:
 Requires: Anaconda + Python 3 (Tested on 3.{5-6}) + Homebrew
 
 #### Installing opencv:
->>>>>>> c8d097a16c15901b6a9fb553d97b7e2c8f67f5e0
 - Create a new conda environment:
     * `conda create --name myenv` replacing myenv with your environment's name.
 
