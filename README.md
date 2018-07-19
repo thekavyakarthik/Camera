@@ -2,7 +2,6 @@
 
 This provides a simple interface, via OpenCV, for configuring and utilizing a camera device, using Python
 
-`camera` was created for the CogWorks 2017 summer program, in the [Beaver Works Summer Institute at MIT](https://beaverworks.ll.mit.edu/CMS/bw/bwsi). It was developed by [Ryan Soklaski](https://github.com/LLrsokl), the lead instructor of CogWorks 2017. 
 
 ## Installation Instructions
 We will need to install OpenCV with the Python bindings so that we can access laptop cameras via our Python code. Follow the instructions for Windows and Mac.
@@ -27,24 +26,8 @@ Installing python-opencv:
 ### Mac OS X Instructions (Python 3)
 Requires: Anaconda + Python 3 (Tested on 3.{5-6}) + Homebrew
 
-#### Installing opencv3 (OLD WAY):
 
-- Ensure that Anaconda's python executable is the one being used (i.e. `which python` should yield `/path/to/anaconda/bin/python`)
-
-- Update homebrew with `brew update`
-
-- Install homebrew-science formulae with `brew tap brewsci/science`
-  - This command allows opencv3 to be installed through homebrew
-
-- Install opencv3 with homebrew using `brew install opencv3 --with-python3 --without-python --without-numpy --with-ffmpeg`
-
-- Create a symbolic link of the compiled python binding to your Anaconda's site-package with the following commands for Python 3.5 and 3.6. **These paths need to be adjusted if you are installing opencv-python to a conda env other than root.**
-  - (Python 3.5) `ln -s /usr/local/opt/opencv3/lib/python3.5/site-packages/cv2.cpython-35m-darwin.so /path/to/anaconda/lib/python3.5/site-packages/cv2.so`
-  - (Python 3.6)`ln -s /usr/local/opt/opencv3/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so /path/to/anaconda/lib/python3.6/site-packages/cv2.so`
-  
-If this works for you, great! If you get errors such as: `cannot find cv2`
-
-#### Installing opencv3 (NEW WAY):
+#### Installing opencv3:
 - Create a new conda environment:
     * `conda create --name myenv` replacing myenv with your environment's name.
 
@@ -75,7 +58,7 @@ Please see the camera tutorial notebookin this repo for details of how to config
 %matplotlib notebook
 from camera import take_picture
 import matplotlib.pyplot as plt
-img_array = take_picture()
+img_array = take_picture()  # returns shape-(H, W, C) array
 
 fig,ax = plt.subplots()
 ax.imshow(img_array)
