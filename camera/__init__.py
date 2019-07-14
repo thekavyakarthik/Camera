@@ -99,7 +99,10 @@ def use_camera(port=None, exposure=None):
         yield camera
     finally:
         camera.release()
-        os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = prev_value
+        if prev_value is not None:
+            os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = prev_value
+        else:
+            del os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"]
 
 
 def test_camera(port=None, exposure=None):
