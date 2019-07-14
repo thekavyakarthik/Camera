@@ -92,7 +92,7 @@ def use_camera(port=None, exposure=None):
     assert isinstance(port, int)
     assert isinstance(exposure, (float, int))
     try:
-        prev_value = os.getenv("OPENCV_VIDEOIO_PRIORITY_MSMF", "0")
+        prev_value = os.getenv("OPENCV_VIDEOIO_PRIORITY_MSMF", None)
         os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
         camera = cv2.VideoCapture(port)
         time.sleep(exposure)  # If you don't wait, the image will be dark
