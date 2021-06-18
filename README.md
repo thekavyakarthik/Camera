@@ -13,7 +13,7 @@ conda install -c conda-forge opencv
 Clone Camera, navigate to the resulting directory, and run
 
 ```shell
-python setup.py develop
+pip install -e .
 ```
 
 ## Usage
