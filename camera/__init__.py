@@ -134,6 +134,15 @@ def test_camera(port=None, exposure=None):
 
 def take_picture(port=None, exposure=None):
     """ Take a picture and return the (H, W, 3) array of RGB values.
+    
+        Parameters
+        ----------
+        port : Optional[int], (default=0)
+            An integer, typically 0. This indicates which camera-device should be used.
+        
+        exposure : Optional[float], (default=0.1)
+            The time (seconds) for which the camera is active before taking the photo.
+            If your photo is too dark, try increasing this time.
 
         Returns
         -------
