@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: camera
+Version: 0.0
+Summary: Simple API for configuring.using camera in Python
+Author: Ryan Soklaski
+License: MIT
+Platform: Windows
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
